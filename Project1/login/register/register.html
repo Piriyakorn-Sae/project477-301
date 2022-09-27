@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="row px-3">
+      <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+        <div class="img-left d-none d-md-flex"></div>
+
+        <div class="card-body">
+          <h4 class="title text-center mt-4">
+            Create Account
+          </h4>
+          <form class="form-box px-3">
+            <div class="form-input">
+                <span><i class="fa fa-user"></i></span>
+                <input type="name" placeholder="Name" tabindex="10" required>
+              </div>
+            <div class="form-input">
+              <span><i class="fa fa-envelope-o"></i></span>
+              <input type="email" placeholder="Email Address" tabindex="10" required>
+            </div>
+            <div class="form-input">
+              <span><i class="fa fa-key"></i></span>
+              <input type="password" id="password" placeholder="Password" tabindex="10" required>
+            </div>
+            <div class="form-input">
+                <span><i class="fa fa-key"></i></span>
+                <input type="password" id="confirm_password" placeholder="Confirm Password" tabindex="10" required>
+              </div>
+
+            <div id="ms"></div><br>
+
+            <div class="mb-3">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="cb1" name="">
+                <label class="custom-control-label" for="cb1">I agree to the terms & conditions</label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <button type="submit" class="btn btn-block text-uppercase">
+                Sign Up
+              </button>
+            </div>
+            <div class="text-center mb-3">
+                Have already an account ?
+              </div>
+  
+              <div class="text-center" style= "text-decoration: underline;">
+                  <a href="http://localhost/Project1/login/login.html" class="forget-link">
+                    Login here
+                  </a>
+                </div>
+
+            <hr class="my-4">
+
+            <script>
+              var password = document.getElementById("password")
+              var confirm_password = document.getElementById("confirm_password")
+              var ms = document.getElementById("ms")
+              function validatePassword(){
+              if(password.value == confirm_password.value) {
+                  ms.innerHTML = ""
+
+              } else {
+                  ms.innerHTML = "Passwords didn't match."
+                  ms.style.color = "red"
+              }
+          }
+  password.onkeyup = validatePassword
+  confirm_password.onkeyup = validatePassword
+          </script>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="row px-3">
+      <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+        <div class="img-left d-none d-md-flex"></div>
+
+        <div class="card-body">
+          <h4 class="title text-center mt-4">
+            Login into Account
+          </h4>
+          <form class="form-box px-3" action="localhost/project1/web.html">
+            <div class="form-input">
+              <span><i class="fa fa-envelope-o"></i></span>
+              <div id="div1"><input type="email" id="div1" placeholder="Email Address" tabindex="10" required></div>
+            <div class="form-input" >
+              <span><i class="fa fa-key"></i></span>
+              <input type="password" id="div2" placeholder="Password" required>
+            </div>
+
+            <div class="mb-3">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="cb1">
+                <label class="custom-control-label" for="cb1">Remember me</label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <button type="submit" class="btn btn-block text-uppercase" onclick="login()">
+                Login
+              </button>
+            </div>
+
+            <div class="text-center mb-3">
+              or login with 
+            </div>
+
+            <div class="text-center" style= "text-decoration: underline;">
+                <a href="http://localhost/project1/web.html" class="forget-link">
+                  Guest Login
+                </a>
+              </div>
+
+            <hr class="my-4">
+
+            <div class="text-center mb-2" >
+              Don't have an account?
+              <a href="http://localhost/Project1/login/register/register.html" class="register-link" style= "text-decoration: underline;">
+                Register here
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function login(){
+      var u = document.getElementById("div1").value;
+      var p = document.getElementById("div2").value;
+      if(u == "" || p == "") {
+        return false;
+      }
+  </script>
+</body>
+</html>
